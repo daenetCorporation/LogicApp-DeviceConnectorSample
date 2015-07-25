@@ -11,11 +11,20 @@ namespace DeviceConnectorSample.Controllers
 {
     public class DeviceController : ApiController
     {
+        /// <summary>
+        /// Trigger operation for collecting of telemetry data.
+        /// </summary>
+        /// <param name="triggerState">mock if you do not have Service Bus connection string. Anything else will
+        /// collect telemetry data from service bus.</param>
+        /// <param name="sbConnStr">Service Bus connection string. Used only if triggerState not equql 'mock'.</param>
+        /// <param name="queuePath">The path of the queue where telemetry data are stored.</param>
+        /// <returns>List of telemetry data.</returns>
         [HttpGet]
         [Route("api/device/telemetry")]
         public HttpResponseMessage TelemetryDataPollTrigger(
             string triggerState = null,
-            string rootNamespace = null)
+            string sbConnStr = null,
+            string queuePath = null)
         {
 
             IDataChannel chn;
@@ -23,7 +32,7 @@ namespace DeviceConnectorSample.Controllers
             if (triggerState != null && triggerState.ToLower() == "mock")
                 chn = new MockChannel();
             else
-                chn = new SbChannel();
+                chn = new SbChannel(sbConnStr, queuePath);
 
             var telemetryData = chn.GetTelemetryData();
 
