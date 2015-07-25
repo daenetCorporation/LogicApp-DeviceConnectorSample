@@ -43,7 +43,7 @@ namespace DeviceConnectorSample.Controllers
 
         public List<string> Get()
         {
-            return null;
+            return new string[] {"aaa"}.ToList();
         }
     }
 }

@@ -9,7 +9,7 @@ namespace DeviceConnectorSample
 {
     public class SbChannel : IDataChannel
     {
-        private string m_SbConnStr = "Endpoint=sb://factorybh.servicebus.windows.net/;SharedAccessKeyName=send_receive;SharedAccessKey=bADkRExvoXjw7t81Ln/MGRd2u6mHYMVjUV4+zEInz+4=";
+        private string m_SbConnStr = "PUT YOUR SERVICE BUS CONNECTION STRING HERE";
 
         public List<Command> GetTelemetryData()
         {

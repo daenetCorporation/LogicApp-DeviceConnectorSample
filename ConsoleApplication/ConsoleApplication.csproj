@@ -78,6 +78,21 @@
     <Compile Include="DeviceConnectorA\IDeviceConnectorA.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TwilioConnector\ITwilioConnector.cs" />
+    <Compile Include="TwilioConnector\Models\AddIncomingPhoneNumberRequest.cs" />
+    <Compile Include="TwilioConnector\Models\AvailablePhoneNumbers.cs" />
+    <Compile Include="TwilioConnector\Models\AvailablePhoneNumbersCollection.cs" />
+    <Compile Include="TwilioConnector\Models\IncomingPhoneNumber.cs" />
+    <Compile Include="TwilioConnector\Models\IncomingPhoneNumberCollection.cs" />
+    <Compile Include="TwilioConnector\Models\MessageResponse.cs" />
+    <Compile Include="TwilioConnector\Models\MessageResponseCollection.cs" />
+    <Compile Include="TwilioConnector\Models\SendMessageRequest.cs" />
+    <Compile Include="TwilioConnector\Models\SendMessageResponse.cs" />
+    <Compile Include="TwilioConnector\Models\UsageRecords.cs" />
+    <Compile Include="TwilioConnector\Models\UsageRecordsCollection.cs" />
+    <Compile Include="TwilioConnector\TwilioConnector.cs" />
+    <Compile Include="TwilioConnector\TwilioConnectorAppServiceExtensions.cs" />
+    <Compile Include="TwilioConnector\TwilioConnectorExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -123,6 +123,7 @@
     <None Include="Properties\PublishProfiles\DeviceConnectorA%28sensorsgroup%29 %282%29.pubxml" />
     <None Include="Properties\PublishProfiles\DeviceConnectorA%28sensorsgroup%29 %283%29.pubxml" />
     <None Include="Properties\PublishProfiles\DeviceConnectorA%28sensorsgroup%29.pubxml" />
+    <Content Include="ReadMe.md" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
