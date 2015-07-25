@@ -29,7 +29,9 @@ namespace DeviceConnectorSample.Controllers
 
             IDataChannel chn;
 
-            if (triggerState != null && triggerState.ToLower() == "mock")
+            if (triggerState == null)
+                chn = chn = new MockChannel();
+            else if (triggerState != null && triggerState.ToLower() == "mock")
                 chn = new MockChannel();
             else
                 chn = new SbChannel(sbConnStr, queuePath);
@@ -52,7 +54,7 @@ namespace DeviceConnectorSample.Controllers
 
         public List<string> Get()
         {
-            return new string[] {"aaa"}.ToList();
+            return new string[] { "aaa" }.ToList();
         }
     }
 }
